@@ -265,10 +265,8 @@
   }
 
   .suggestion_section {
-    display: flex; 
+    display: block; 
     align-items: center;
-    flex-direction: column;
-    padding: 20px;
 
   .post .story .items .profile .img img {
     height: 45px;
