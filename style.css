@@ -43,6 +43,7 @@
   font-family: "Lobster", cursive;
   font-size: 29px;
 }
+/* logo section */
 
 /* post section */
 .post {
@@ -239,41 +240,24 @@
     flex-direction: column;
   }
 
-  /* Bottom navigation bar */
   .left_bar {
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    border: none;
-    border-top: 1px solid #504949;
-    background-color: #000;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    background-color: black;
     z-index: 10;
-  }
-
-  .left_bar .items {
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    padding: 5px;
-  }
-
-  .left_bar .items .material-symbols-outlined {
-    margin-right: 0;
-    font-size: 22px;
+    overflow-x: auto;
   }
 
   .left_bar .items span {
-    font-size: 10px;
+    font-size: 18px;
   }
 
   .post {
     width: 100%;
-    margin-bottom: 60px; /* prevent content from hiding behind bottom nav */
   }
 
   .post .main_post {
@@ -300,14 +284,10 @@
     font-size: 22px;
   }
 
-  .left_bar {
-    height: 55px;
-  }
-
   .left_bar .items {
-    padding: 4px;
-    margin: 0;
-    font-size: 10px;
+    padding: 8px;
+    margin: 2px;
+    font-size: 12px;
   }
 
   .post .story {
