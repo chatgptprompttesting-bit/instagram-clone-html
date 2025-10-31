@@ -77,7 +77,6 @@
   padding: 2px;
   background-image: conic-gradient(#feda75, #fa7e1e, #d62976, #962fbf);
   border-radius: 50%;
-  /* display: inline-block; */
 }
 
 .post .story .items .profile .img img {
@@ -89,6 +88,7 @@
   display: block;
   cursor: pointer;
 }
+
 .post .main_post {
   height: 70vh;
   width: 70%;
@@ -171,178 +171,137 @@
   border-radius: 50%;
 }
 
-
-.suggestion_section .suggestion .follow{
-    color: blueviolet;
+.suggestion_section .suggestion .follow {
+  color: blueviolet;
 }
 
-.suggestion_section .suggestion .profile p{
-    color:#bcbab7;
+.suggestion_section .suggestion .profile p {
+  color: #bcbab7;
 }
 
-.suggestion_section .suggestion .followsee{
-color: whitesmoke;
+.suggestion_section .suggestion .followsee {
+  color: whitesmoke;
 }
 
-
-.m{
-    margin-top: 13px;
+.m {
+  margin-top: 13px;
 }
 
+/* ============================= */
+/* ✅ Responsive Design Section  */
+/* ============================= */
 
-
-
-
-
-
-
-
-
-
-
-
-/* ===================== */
-/* 🔹 Responsive Design 🔹 */
-/* ===================== */
-
-/* For laptops & smaller desktops (max-width: 1200px) */
-@media (max-width: 1200px) {
-  .left_bar {
-    width: 20%;
-  }
-
-  .post {
-    width: 55%;
-  }
-
-  .suggestion_section {
-    width: 25%;
-  }
-
-  .post .main_post {
-    width: 80%;
-  }
-}
-
-/* For tablets (max-width: 992px) */
+/* Tablets (max-width: 992px) */
 @media (max-width: 992px) {
+  .instagram {
+    flex-direction: column;
+    height: auto;
+  }
+
   .left_bar {
-    width: 25%;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #504949;
+    display: flex;
+    justify-content: space-around;
   }
 
   .post {
-    width: 75%;
+    width: 100%;
   }
 
   .suggestion_section {
-    display: none; /* Hide suggestions on smaller screens */
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #504949;
+    padding-bottom: 20px;
   }
 
   .post .main_post {
     width: 90%;
   }
 
+  .left_bar .items {
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
   .post .story .items .profile .img img {
     height: 50px;
     width: 50px;
   }
-
-  .post .main_post .profile img {
-    height: 35px;
-    width: 35px;
-  }
 }
 
-/* For mobile devices (max-width: 768px) */
+/* Mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
   .instagram {
     flex-direction: column;
-    align-items: center;
   }
 
-  /* Fixed bottom navbar for mobile */
   .left_bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid #504949;
-    border-right: none;
-    background-color: #000;
-    z-index: 999;
-  }
-
-  .left_bar .items {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 6px;
-    font-size: 12px;
-  }
-
-  .left_bar .items .material-symbols-outlined {
-    font-size: 22px;
-    margin: 0;
-  }
-
-  #logo {
-    display: none; /* Hide Instagram logo to save space */
-  }
-
-  /* Post Section Full Width */
-  .post {
+    justify-content: space-between;
     width: 100%;
     height: auto;
-    padding-bottom: 80px; /* Space for bottom nav */
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 10;
+    overflow-x: auto;
+  }
+
+  .left_bar .items span {
+    font-size: 18px;
+  }
+
+  .post {
+    width: 100%;
   }
 
   .post .main_post {
     width: 95%;
   }
 
-  .post .story {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 10px 0;
-  }
-
-  .post .story .items {
-    flex-direction: column;
-    margin: 6px;
-  }
-
   .suggestion_section {
-    display: none;
-  }
-}
-
-/* For very small phones (max-width: 480px) */
-@media (max-width: 480px) {
-  .left_bar {
-    height: 55px;
-  }
-
-  .left_bar .items .material-symbols-outlined {
-    font-size: 20px;
-  }
-
-  .left_bar .items span {
-    display: none; /* Only show icons on small phones */
-  }
-
-  .post .main_post .profile img {
-    height: 30px;
-    width: 30px;
+    display: none; /* hide suggestion section on small screens */
   }
 
   .post .story .items .profile .img img {
     height: 45px;
     width: 45px;
+  }
+
+  .post .main_post .engagement .material-symbols-outlined {
+    font-size: 1.5rem;
+  }
+}
+
+/* Very small devices (max-width: 480px) */
+@media (max-width: 480px) {
+  #logo {
+    font-size: 22px;
+  }
+
+  .left_bar .items {
+    padding: 8px;
+    margin: 2px;
+    font-size: 12px;
+  }
+
+  .post .story {
+    flex-wrap: wrap;
+  }
+
+  .post .story .items .profile .img img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .post .main_post {
+    width: 100%;
+    height: auto;
   }
 
   .post .main_post .img img {
