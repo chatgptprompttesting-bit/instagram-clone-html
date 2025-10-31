@@ -265,7 +265,7 @@
   }
 
   .suggestion_section {
-    display: none; /* hide suggestion section on small screens */
+    display: flex; /* hide suggestion section on small screens */
   }
 
   .post .story .items .profile .img img {
