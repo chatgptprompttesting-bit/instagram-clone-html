@@ -190,3 +190,139 @@ color: whitesmoke;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* ===================== */
+/* 🔹 Responsive Design 🔹 */
+/* ===================== */
+
+/* For laptops & smaller desktops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .left_bar {
+    width: 20%;
+  }
+
+  .post {
+    width: 55%;
+  }
+
+  .suggestion_section {
+    width: 25%;
+  }
+
+  .post .main_post {
+    width: 80%;
+  }
+}
+
+/* For tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .left_bar {
+    width: 25%;
+  }
+
+  .post {
+    width: 75%;
+  }
+
+  .suggestion_section {
+    display: none; /* Hide suggestions for smaller screens */
+  }
+
+  .post .main_post {
+    width: 90%;
+  }
+
+  .post .story .items .profile .img img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .post .main_post .profile img {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .instagram {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left_bar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid #504949;
+    justify-content: space-around;
+  }
+
+  .left_bar .items {
+    flex-direction: column;
+    font-size: 14px;
+    margin: 4px;
+  }
+
+  .post {
+    width: 100%;
+    height: auto;
+  }
+
+  .post .main_post {
+    width: 95%;
+  }
+
+  .post .story {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+
+  .post .story .items {
+    flex-direction: column;
+    margin: 6px;
+  }
+
+  .suggestion_section {
+    display: none;
+  }
+}
+
+/* For small phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .left_bar .items .material-symbols-outlined {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  #logo {
+    font-size: 22px;
+  }
+
+  .post .main_post .profile img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .post .story .items .profile .img img {
+    height: 45px;
+    width: 45px;
+  }
+
+  .post .main_post .img img {
+    border-radius: 6px;
+  }
+}
