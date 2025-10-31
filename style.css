@@ -235,7 +235,7 @@ color: whitesmoke;
   }
 
   .suggestion_section {
-    display: none; /* Hide suggestions for smaller screens */
+    display: none; /* Hide suggestions on smaller screens */
   }
 
   .post .main_post {
@@ -260,25 +260,45 @@ color: whitesmoke;
     align-items: center;
   }
 
+  /* Fixed bottom navbar for mobile */
   .left_bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 60px;
     display: flex;
-    overflow-x: auto;
-    border-right: none;
-    border-bottom: 1px solid #504949;
     justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #504949;
+    border-right: none;
+    background-color: #000;
+    z-index: 999;
   }
 
   .left_bar .items {
     flex-direction: column;
-    font-size: 14px;
-    margin: 4px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 6px;
+    font-size: 12px;
   }
 
+  .left_bar .items .material-symbols-outlined {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  #logo {
+    display: none; /* Hide Instagram logo to save space */
+  }
+
+  /* Post Section Full Width */
   .post {
     width: 100%;
     height: auto;
+    padding-bottom: 80px; /* Space for bottom nav */
   }
 
   .post .main_post {
@@ -301,15 +321,18 @@ color: whitesmoke;
   }
 }
 
-/* For small phones (max-width: 480px) */
+/* For very small phones (max-width: 480px) */
 @media (max-width: 480px) {
-  .left_bar .items .material-symbols-outlined {
-    font-size: 20px;
-    margin-right: 0;
+  .left_bar {
+    height: 55px;
   }
 
-  #logo {
-    font-size: 22px;
+  .left_bar .items .material-symbols-outlined {
+    font-size: 20px;
+  }
+
+  .left_bar .items span {
+    display: none; /* Only show icons on small phones */
   }
 
   .post .main_post .profile img {
